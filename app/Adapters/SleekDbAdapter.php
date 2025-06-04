@@ -4,7 +4,7 @@ namespace App\Adapters;
 
 use SleekDB\Store;
 
-class SleekDBAdapter implements PointRegisterInterface
+class SleekDbAdapter implements PointRegisterInterface
 {
     private readonly string $databaseDirectory;
     private Store $col;

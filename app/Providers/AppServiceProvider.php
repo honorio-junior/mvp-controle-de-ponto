@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use App\Adapters\PointRegisterInterface;
-use App\Adapters\SleekDBAdapter;
+use App\Adapters\SleekDbAdapter;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(PointRegisterInterface::class, SleekDBAdapter::class);
+        $this->app->bind(PointRegisterInterface::class, SleekDbAdapter::class);
     }
 
     /**

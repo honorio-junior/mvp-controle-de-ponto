@@ -60,6 +60,28 @@ Este é um sistema simples e funcional de registro de ponto feito com Laravel 12
   - Excluir usuários (os registros de ponto são mantidos).
   - Gerar relatórios simples dos registros.
 
+## 🚀 Instalando (Com Docker)
+
+1. **Clone o repositório**
+
+2. **Copie o arquivo .env e edite com sua credencial**
+
+```bash
+cp .env.example .env
+```
+
+3. **Suba o container**
+
+```bash
+docker-compose up --build
+```
+
+4. **Aguarde o container subir**
+
+### 🌐 Acesse no navegador!
+
+Abra: [http://localhost](http://localhost)
+
 ## 📄 Licença
 
 Este projeto é livre. Sinta-se à vontade para adaptar conforme sua necessidade.
