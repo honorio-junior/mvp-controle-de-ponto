@@ -1,12 +1,12 @@
-# 📌 Sistema de Registro de Ponto (MVP)
+# 📌 Sistema de Registro de Ponto
 
-Este é um sistema simples e funcional de registro de ponto feito com Laravel 12, usando TailwindCSS no frontend e SQL e SleekDB (no padrao de projeto adapter) para persistência de dados. Ideal para uso interno por pequenas equipes. Este trabalho foi desenvolvido por mim, para um trabalho da faculdade.
+Este é um sistema simples e funcional de registro de ponto feito com Laravel 12, usando TailwindCSS no frontend e SQL e SleekDB (no padrao de projeto adapter) para persistência de dados. Ideal para uso interno por pequenas equipes. Este projeto foi desenvolvido por mim, para um trabalho da faculdade, um MVP (Produto Mínimo Viável) 100% funcional.
 
 ![Home](https://i.imgur.com/nU094HX.png)
 
 ---
 
-## ✅ Funcionalidades (MVP)
+## ✅ Funcionalidades atuais
 
 - Cadastro de funcionários (nome, sobrenome, CPF e senha).
 - Autenticação de usuários.
@@ -39,16 +39,15 @@ Este é um sistema simples e funcional de registro de ponto feito com Laravel 12
 
 ```json
 {
-  "cpf": "95363572087",
+  "cpf": "12345678901",
   "points": {
     "2025-06-04": [
-      "05:36:26",
-      "05:36:29",
-      "05:36:31",
-      "05:36:34"
+      "08:05:26",
+      "12:30:29",
+      "13:23:31",
+      "17:00:34"
     ]
-  },
-  "_id": 3
+  }
 }
 ```
 
@@ -57,7 +56,7 @@ Este é um sistema simples e funcional de registro de ponto feito com Laravel 12
   - Cadastrar novos funcionários.
   - Listar todos os usuários.
   - Excluir usuários (os registros de ponto são mantidos).
-  - Gerar relatórios simples dos registros.
+  - Gerar relatórios dos registros.
 
 ## 🚀 Instalando (Com Docker)
 
@@ -75,7 +74,7 @@ cp .env.example .env
 docker-compose up --build
 ```
 
-4. **Aguarde o container subir**
+4. **Aguarde a criacao container**
 
 ### 🌐 Acesse no navegador!
 
