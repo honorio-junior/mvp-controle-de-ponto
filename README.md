@@ -18,8 +18,7 @@ Este é um sistema simples e funcional de registro de ponto feito com Laravel 12
   - Exclusão de usuários (Mantendo os registros de ponto).
   - Geração de relatório.
 
-![Painel Admin](https://i.imgur.com/dIL3li1.png)
-![Confirmacao](https://i.imgur.com/rQsvJY1.png)
+![Painel Admin](https://i.imgur.com/Lic3TZ9.png)
 ---
 
 ## 🧱 Tecnologias utilizadas

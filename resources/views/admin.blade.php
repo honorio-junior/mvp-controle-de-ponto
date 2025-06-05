@@ -55,10 +55,10 @@
 
             {{-- Botão de relatório --}}
             <section class="text-right">
-                <form action="" method="GET">
+                <form action="{{ route('admin.download.records') }}" method="GET">
                     <button type="submit"
                         class="bg-gray-800 text-white px-6 py-2 rounded-md font-semibold hover:bg-gray-900 transition duration-200">
-                        Download Relatório do Dia
+                        Download Relatório
                     </button>
                 </form>
             </section>

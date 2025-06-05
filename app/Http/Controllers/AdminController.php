@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Adapters\PointRegisterInterface;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -10,6 +11,12 @@ use Illuminate\Database\QueryException;
 
 class AdminController extends Controller
 {
+
+    public function __construct(
+        private PointRegisterInterface $pointRegister
+    ) {
+    }
+
     public function index()
     {
         $users = User::where('id', '>', 1)->get();
@@ -25,6 +32,23 @@ class AdminController extends Controller
             return redirect()->route('admin')->with('error', $e->getMessage());
         }
     }
+
+    public function records()
+    {
+        $data = $this->pointRegister->all(); // coleta os dados
+
+        $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+        $fileName = 'pontos_' . now()->format('Ymd_His') . '.json';
+
+        return response()->streamDownload(function () use ($json) {
+            echo $json;
+        }, $fileName, [
+            'Content-Type' => 'application/json',
+            'Content-Disposition' => "attachment; filename={$fileName}",
+        ]);
+    }
+
     public function userCreate(Request $request)
     {
         // Validação dos dados do formulário

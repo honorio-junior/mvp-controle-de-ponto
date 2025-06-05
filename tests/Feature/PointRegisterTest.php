@@ -14,7 +14,7 @@ class PointRegisterTest extends TestCase
     public function test_save(): void
     {
         // $data = [
-        //     "cpf" => "01506890202",
+        //     "cpf" => "00000000000",
         //     "points" => [
         //         [
         //             "date("Y-m-d")" => [
@@ -27,14 +27,21 @@ class PointRegisterTest extends TestCase
         //     ]
         // ];
         $sleek = new SleekDBAdapter();
-        $cpf = '01506890202';
+        $cpf = '00000000000';
         $sleek->save($cpf);
     }
 
     public function test_find(): void
     {
         $sleek = new SleekDBAdapter();
-        $result = $sleek->find('01506890202');
+        $result = $sleek->find('00000000000');
+        dump($result);
+    }
+
+    public function test_all(): void
+    {
+        $sleek = new SleekDBAdapter();
+        $result = $sleek->all();
         dump($result);
     }
 }

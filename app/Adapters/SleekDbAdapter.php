@@ -22,6 +22,12 @@ class SleekDbAdapter implements PointRegisterInterface
         return $user[0] ?? [];
     }
 
+    public function all(): array
+    {
+        $users = $this->col->findAll();
+        return $users ?? [];
+    }
+
     public function save(string $cpf): void
     {
         $user = $this->find($cpf);
